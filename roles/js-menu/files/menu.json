@@ -18,6 +18,7 @@
   "autoupdate_menu": true,
   "allow_server_time_update" : true,
   "multi_tab" : false,
+  "show_headers": true,
   "tab_names" : ["Main"],
   "menu_items_1" :
     [

@@ -707,7 +707,26 @@ function checkMenuDone() {
         $('a').click(iiabMeter);
         genLangSelector();
         activateButtons();
+        buildHeaders();
         //alert ("menu done");
+    }
+}
+
+function buildHeaders(){
+    if(menuParams.show_headers === true){
+        var navWrapper = '<ul class="navbar-nav"></ul>';
+        $('#heading-navbar').addClass('navbar navbar-expand-lg navbar-light bg-light');
+        $('#heading-navbar').append(navWrapper);
+        for (var i = 0; i < menuItems.length; i++) {
+            var module = menuDefs[menuItems[i]]
+            if (module.hasOwnProperty('header')) {
+                var header = module['header'];
+                if (header) {
+                    var navHtml = `<li class="nav-item"> <a class="nav-link" href="#${module['menu_id']}">${module['title']}</a></li>`;
+                    $("#heading-navbar > ul").append(navHtml);
+                }
+            }
+        }
     }
 }
 
