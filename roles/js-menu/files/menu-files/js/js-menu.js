@@ -367,6 +367,13 @@ function procMenuItem(module) {
 
   langClass = "lang_" + module.lang;
   $(menuItemDivId).addClass(langClass);
+  if (
+    menuParams.show_headers === true &&
+    module.hasOwnProperty("header") &&
+    module["header"]
+  ) {
+    $(menuItemDivId).addClass("bg-dark text-white");
+  }
   $(menuItemDivId).html(menuHtml);
   getExtraHtml(module);
 }
