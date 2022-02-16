@@ -102,6 +102,16 @@ a:visited {
   height: 120px;
 }
 
+#headerDesktop .h1 {
+  margin: auto;
+  text-align: center;
+  font-weight: 400;
+}
+@media (min-width: 992px) {
+  #headerDesktop .h1 {
+    font-size: 4.3em;
+  }
+}
 #content {
   margin: 10px auto;
 }
@@ -215,7 +225,7 @@ a:visited {
   margin-bottom: 10px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   #heading-navbar {
     display: block;
   }
